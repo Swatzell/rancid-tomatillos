@@ -1,7 +1,7 @@
 import './MovieCards.css'
 
 
-const movieCards = ({ movie }) => {
+function MovieCards({ movie }){
     return (
       <div className="movie-cards">
         <img src={movie.poster_path} alt={movie.title} />
@@ -10,4 +10,4 @@ const movieCards = ({ movie }) => {
   };
   
  
-  export default movieCards;
+  export default MovieCards;
