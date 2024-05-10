@@ -7,7 +7,7 @@ function MovieCards(props){
       <div className="movie-cards">
         <img src={movie.poster_path} alt={movie.title} />
         <h3>{movie.title}</h3>
-        <p>⭐️ {movie.average_rating}</p>
+        <p>⭐️ {movie.average_rating.toFixed(2)}</p>
       </div>
     );
   };
