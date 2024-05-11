@@ -1,14 +1,17 @@
 import { useState } from 'react';
 import MovieCards from '../MovieCard/MovieCards.js';
-import movieData from '../MockData/mockData.js';
 import MainMovie from '../MainMovie/MainMovie.js'
 import SelectedMovie from '../SelectedMovie/SelectedMovie.js';
 
 function App() {
-  const [movies] = useState(movieData.movies);
+  const [movies,setMovies] = useState([]);
   const [selectedMovie, setSelectedMovie] = useState(null);
   const [showMainMovie, setShowMainMovie] = useState(true);
   const [showMovieCards, setShowMovieCards] = useState(true);
+
+  useEffect(() => {
+    fetchMovies();
+  }, []);
 
   const randomIndex = Math.floor(Math.random() * movies.length);
   const randomMovie = movies[randomIndex];
