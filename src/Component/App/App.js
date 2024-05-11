@@ -30,7 +30,7 @@ function App() {
       <main className="App">
         <h1>Rancid Tomatillos</h1>
         {showMainMovie && (
-          <MainMovie movie={randomMovie} onClick={() => handleMovieSelection(randomMovie.id)} />
+          <MainMovie key ={randomMovie.id} movie={randomMovie} onClick={() => handleMovieSelection(randomMovie.id)} />
         )}
         {selectedMovie && <SelectedMovie movie={selectedMovie} onBack={handleBackToSelection} />}
         {showMovieCards && (
