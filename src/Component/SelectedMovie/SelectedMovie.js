@@ -13,7 +13,7 @@ const {movie, onBack} = props
              <div className='movieSpecs'>
                 <h3>{movie.title}</h3>
                 <h4>{movie.average_rating.toFixed(2)}</h4>
-                <h4>{movie.relese_date}</h4>
+                <h4>{movie.release_date}</h4>
                 <div>
                     <p>{movie.genres}</p>
                     <p>{movie.overview}</p>
