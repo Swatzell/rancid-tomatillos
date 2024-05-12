@@ -2,6 +2,7 @@ import  './SelectedMovie.css'
 
 function SelectedMovie(props) {
     const { movie, onBack } = props;
+    const genres = movie.genres.join(', ')
     return (
       <div className='selectedMovie'>
         <div className='imagesContainer'>
@@ -14,12 +15,12 @@ function SelectedMovie(props) {
         </div>
         <div className='movieSpecs'>
           <h3>{movie.title}</h3>
-          <h4>{movie.average_rating.toFixed(2)}</h4>
-          <h4>{movie.release_date}</h4>
+          <h4>⭐️ {movie.average_rating.toFixed(2)}</h4>
+          <h4>Released: {movie.release_date}</h4>
           <div>
-            <p>{movie.genres}</p>
-            <p>{movie.overview}</p>
-            <p>{movie.runtime}</p>
+            <p>Genres: {genres}</p>
+            <p>Overview: {movie.overview}</p>
+            <p>Movie Length: {movie.runtime} min.</p>
           </div>
         </div>
         <span style={{ cursor: 'pointer' }} onClick={onBack}>Go Back!</span>
