@@ -1,0 +1,36 @@
+.selectedMovie {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+  }
+  
+  .imagesContainer {
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly between the children */
+    width: 100%; /* Ensure it takes up the full width of the container */
+  }
+  
+  .poster, .backdrop {
+    width: 48%; /* Each takes almost half of the container (with a little space in between) */
+  }
+  
+  .backdrop img, .poster img {
+    width: 100%; /* Ensure the image covers the entire div */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .movieSpecs, span {
+    width: 100%; /* Each takes up the full width of the container */
+  }
+  
+  /* Add some space between the elements */
+  .imagesContainer {
+    margin-bottom: 20px; /* Add space between the images and the movie specs */
+  }
+  
+  .movieSpecs {
+    margin-top: 20px; /* Add space between the images and the movie specs */
+  }
+  
+  /* Adjust other styles as needed */
+  
