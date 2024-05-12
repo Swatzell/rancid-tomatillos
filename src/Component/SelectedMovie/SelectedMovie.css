@@ -1,36 +1,35 @@
 .selectedMovie {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center items horizontally */
+    align-items: center; 
   }
   
   .imagesContainer {
     display: flex;
-    justify-content: space-between; /* Distribute space evenly between the children */
-    width: 100%; /* Ensure it takes up the full width of the container */
+    justify-content: space-between;
+    width: 100%; 
   }
   
   .poster, .backdrop {
-    width: 48%; /* Each takes almost half of the container (with a little space in between) */
+    width: 48%;
   }
   
   .backdrop img, .poster img {
-    width: 100%; /* Ensure the image covers the entire div */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; 
+    height: auto; 
   }
   
   .movieSpecs, span {
-    width: 100%; /* Each takes up the full width of the container */
+    width: 100%; 
   }
   
-  /* Add some space between the elements */
   .imagesContainer {
-    margin-bottom: 20px; /* Add space between the images and the movie specs */
+    margin-bottom: 20px; 
   }
   
   .movieSpecs {
-    margin-top: 20px; /* Add space between the images and the movie specs */
+    margin-top: 20px; 
+    text-align: center;
   }
-  
-  /* Adjust other styles as needed */
+
   
