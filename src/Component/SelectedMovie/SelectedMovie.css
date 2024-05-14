@@ -1,0 +1,35 @@
+.selectedMovie {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+  
+  .imagesContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; 
+  }
+  
+  .poster, .backdrop {
+    width: 48%;
+  }
+  
+  .backdrop img, .poster img {
+    width: 100%; 
+    height: auto; 
+  }
+  
+  .movieSpecs, span {
+    width: 100%; 
+  }
+  
+  .imagesContainer {
+    margin-bottom: 20px; 
+  }
+  
+  .movieSpecs {
+    margin-top: 20px; 
+    text-align: center;
+  }
+
+  
