@@ -11,16 +11,16 @@
 .poster {
   width: 48%;
   display: flex;
-  justify-content: center; /* Center the content horizontally */
-  align-items: center; /* Center the content vertically */
+  justify-content: center; 
+  align-items: center; 
 }
 .poster img {
-  width: 100%; 
+  width: 65%; 
   height: auto; 
   margin-top: 20%;
 }
 .movieSpecs, span {
-  width: 100%; 
+  width: 65%; 
 }
 .imagesContainer {
   margin-bottom: 20px; 
