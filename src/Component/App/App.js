@@ -27,7 +27,7 @@ function App() {
     }
   };
     
-const handleMovieSelection = async (id) => {
+  const handleMovieSelection = async (id) => {
     try {
       const response = await fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}`);
       if (!response.ok) {
@@ -40,7 +40,7 @@ const handleMovieSelection = async (id) => {
     } catch (error) {
       setError(error);
     }
-  };
+  };  
   function handleBackToSelection() {
     setSelectedMovie(null);
     setShowMainMovie(true);
