@@ -5,7 +5,7 @@ import SelectedMovie from '../SelectedMovie/SelectedMovie.js';
 
 function App() {
   const [movies,setMovies] = useState([]);
-  const [selectedMovie, setSelectedMovie] = useState(null);
+  const [selectedMovie, setSelectedMovie] = useState();
   const [showMainMovie, setShowMainMovie] = useState(true);
   const [showMovieCards, setShowMovieCards] = useState(true);
   const [error, setError] = useState(false);
@@ -47,7 +47,7 @@ function App() {
     setShowMovieCards(true);
   }
 
-  console.log("Selected movie state:", selectedMovie);
+
 
   return (
     <main className="App">
