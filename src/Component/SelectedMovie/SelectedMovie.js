@@ -26,7 +26,7 @@ function SelectedMovie(props) {
                   <p>Movie Length: {movie.runtime} min.</p>
               </div>
           </div>
-          <span style={{ cursor: 'pointer' }} onClick={onBack}>Go Back!</span>
+          <span className='back-button' style={{ cursor: 'pointer' }} onClick={onBack}>Go Back!</span>
       </div>
   );
 }

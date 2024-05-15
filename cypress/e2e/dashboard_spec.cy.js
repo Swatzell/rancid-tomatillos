@@ -35,5 +35,5 @@ describe('Main Page and Movie info page', () => {
      });
      cy.get('.overview').should('be.visible')
   })
-    
-})
+
+});
