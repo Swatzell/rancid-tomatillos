@@ -2,7 +2,7 @@ import { useEffect,useState } from 'react';
 import MovieCards from '../MovieCard/MovieCards.js';
 import MainMovie from '../MainMovie/MainMovie.js'
 import SelectedMovie from '../SelectedMovie/SelectedMovie.js';
-
+import { Route, Routes } from 'react-router-dom';
 function App() {
   const [movies,setMovies] = useState([]);
   const [selectedMovie, setSelectedMovie] = useState(null);
