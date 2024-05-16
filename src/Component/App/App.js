@@ -41,21 +41,26 @@ function App() {
       setError(error);
     }
   };  
-  function handleBackToSelection() {
-    setSelectedMovie(null);
-    setShowMainMovie(true);
-    setShowMovieCards(true);
-  }
+  // function handleBackToSelection() {
+  //   setSelectedMovie(null);
+  //   setShowMainMovie(true);
+  //   setShowMovieCards(true);
+  // }
 
   console.log("Selected movie state:", selectedMovie);
 
   return (
     <main className="App">
       <h1>Rancid Tomatillos</h1>
+      <Routes>
+        <Route path='/' element= {
+
+        } />
+      </Routes>
       {error && <div>Error: Failed to fetch data. Please try again later.</div>}
-      {showMainMovie && movies.length > 0 && <MainMovie movie={movies[0]} onClick={() => handleMovieSelection(movies[0].id)} />}
+      {/* {showMainMovie && movies.length > 0 && <MainMovie movie={movies[0]} onClick={() => handleMovieSelection(movies[0].id)} />} */}
       {selectedMovie && <SelectedMovie movie={selectedMovie} onBack={handleBackToSelection} />}
-      {showMovieCards && (
+      {/* {showMovieCards && (
         <div className="movie-container">
           {movies.map((movie) => (
             <MovieCards
@@ -65,7 +70,7 @@ function App() {
             />
           ))}
         </div>
-      )}
+      )} */}
     </main>
   );
 }

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import  './SelectedMovie.css'
 
 function SelectedMovie(props) {
@@ -26,7 +27,7 @@ function SelectedMovie(props) {
                   <p>Movie Length: {movie.runtime} min.</p>
               </div>
           </div>
-          <span style={{ cursor: 'pointer' }} onClick={onBack}>Go Back!</span>
+          <Link style={{ cursor: 'pointer' }} to= '/' >Go Back!</Link>
       </div>
   );
 }
