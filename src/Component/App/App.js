@@ -3,9 +3,10 @@ import MovieCards from '../MovieCard/MovieCards.js';
 import MainMovie from '../MainMovie/MainMovie.js'
 import SelectedMovie from '../SelectedMovie/SelectedMovie.js';
 import { Route, Routes } from 'react-router-dom';
+import MainPage from '../MainPage/MainPage.js';
 function App() {
   const [movies,setMovies] = useState([]);
-  const [selectedMovie, setSelectedMovie] = useState(null);
+  const [selectedMovie, setSelectedMovie] = useState();
   const [showMainMovie, setShowMainMovie] = useState(true);
   const [showMovieCards, setShowMovieCards] = useState(true);
   const [error, setError] = useState(false);
@@ -41,11 +42,11 @@ function App() {
       setError(error);
     }
   };  
-  // function handleBackToSelection() {
-  //   setSelectedMovie(null);
-  //   setShowMainMovie(true);
-  //   setShowMovieCards(true);
-  // }
+  function handleBackToSelection() {
+    setSelectedMovie(null);
+    setShowMainMovie(true);
+    setShowMovieCards(true);
+  }
 
   console.log("Selected movie state:", selectedMovie);
 
@@ -54,10 +55,11 @@ function App() {
       <h1>Rancid Tomatillos</h1>
       <Routes>
         <Route path='/' element= {
-
+          <MainPage movies={movies}/>
         } />
       </Routes>
       {error && <div>Error: Failed to fetch data. Please try again later.</div>}
+      
       {/* {showMainMovie && movies.length > 0 && <MainMovie movie={movies[0]} onClick={() => handleMovieSelection(movies[0].id)} />} */}
       {selectedMovie && <SelectedMovie movie={selectedMovie} onBack={handleBackToSelection} />}
       {/* {showMovieCards && (

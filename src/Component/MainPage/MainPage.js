@@ -1,22 +1,13 @@
 import MainMovie from "../MainMovie/MainMovie"
-import MovieCards from "../MovieCard/MovieCards"
+//import MovieCards from "../MovieCard/MovieCards"
+import MovieList from "../MovieList/MovieList";
 
 function MainPage(props){
-    const {movies} = props
+    const {movies, handleMovieSelection} = props
     return(
         <>
-            {<MainMovie movie={movies[0]} onClick={() => handleMovieSelection(movies[0].id)} />}  
-            {showMovieCards && (
-                <div className="movie-container">
-                {movies.map((movie) => (
-                    <MovieCards
-                    key={movie.id}
-                    movie={movie}
-                    onClick={() => handleMovieSelection(movie.id)}
-                    />
-                ))}
-                </div>
-            )}
+            <MainMovie movie={movies[0]} onClick={() => handleMovieSelection(movies[0].id)} />  
+            <MovieList movies={movies} />
         </>
     )
 }
