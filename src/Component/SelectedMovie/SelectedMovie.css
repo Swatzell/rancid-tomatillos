@@ -29,6 +29,13 @@
   margin-top: 20px; 
   text-align: center;
 }
-  span {
+  .white-link {
     margin-bottom: 15%;
+  }
+  .white-link {
+    color: limegreen; /* Your default color */
+  }
+  
+  .white-link:active {
+    color: white;
   }

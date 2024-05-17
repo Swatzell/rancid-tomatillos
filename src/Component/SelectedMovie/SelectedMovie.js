@@ -57,7 +57,7 @@ function SelectedMovie(props) {
           <p>Movie Length: {movie.runtime} min.</p>
         </div>
       </div>
-      <Link style={{ cursor: 'pointer' }} to='/'>Go Back!</Link>
+      <Link className= 'white-link' style={{ cursor: 'pointer' }} to='/'>Go Back!</Link>
     </div>
   );
 }
