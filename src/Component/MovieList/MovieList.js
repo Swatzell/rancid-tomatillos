@@ -2,7 +2,10 @@ import MovieCard from "../MovieCard/MovieCards";
 
 function MovieList(props) {
     const { movies, selectedMovie } = props; 
-    console.log({movies})
+    if (!movies || movies.length === 0) {
+        return <p>No movies available</p>;
+      }
+    
     return (
         <div className="movie-container">
             {movies.map((movie) => (
