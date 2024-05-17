@@ -1,4 +1,4 @@
-const movieData = {
+export const movieData = {
     "movies": [
       {
         "id": 694919,
