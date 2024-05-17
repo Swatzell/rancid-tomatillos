@@ -2,6 +2,9 @@ import './MainMovie.css'
 
 function MainMovie (props) {
     const {movie,onClick} = props
+    if (!movie) {
+        return null;
+      }    
     return (
         <div className='main-movie' onClick={onClick}>
             <img src={movie.poster_path} alt={movie.title}/>
