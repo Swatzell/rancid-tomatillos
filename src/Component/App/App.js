@@ -34,14 +34,10 @@ function App() {
       }
       const data = await response.json();
       setSelectedMovie(data.movie);
-      navigate(`/${id}`);
+      navigate(`/movies/${id}`);
     } catch (error) {
       setError(true);
     }
-  };
-
-  const handleBackToSelection = () => {
-    setSelectedMovie();
   };
 console.log(selectedMovie)
   return (
@@ -50,7 +46,7 @@ console.log(selectedMovie)
       {error && <div>Error: Failed to fetch data. Please try again later.</div>}
       <Routes>
         <Route path="/" element={<MainPage movies={movies} handleMovieSelection={handleMovieSelection} />} />
-        <Route path="/:movieID" element={<SelectedMovie selectedMovie ={selectedMovie} />} />
+        <Route path="/movies/:movieID" element={<SelectedMovie selectedMovie ={selectedMovie} />} />
       </Routes>
     </main>
   );
