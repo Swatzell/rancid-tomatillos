@@ -9,7 +9,7 @@ Rancid Tomatillos is a web application similar to rotten tomatoes,netflix etc. t
 
 
 ##Contributors:
-David Swatzell: https://github.com/Swatzell Lydia Sim: https://github.com/LISims88
+David Swatzell: https://github.com/Swatzell Lydia Sims: https://github.com/LISims88
 
 ##Learning Goals:
 Gain competency with React fundamentals
