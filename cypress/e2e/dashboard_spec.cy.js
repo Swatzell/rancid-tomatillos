@@ -29,11 +29,20 @@ describe('Main Page and Movie info page', () => {
   it("should display additional details about a movie when clicked", () => {
     cy.get('.movie-container').find('.movie-cards').first().click();
     cy.get('.movieSpecs').within(() => {
-     cy.get('.movie-title').should('be.visible');
+     cy.get('h3').should('be.visible');
       cy.get('.movie-rating').should('be.visible');
       cy.get('.movie-released').should('be.visible');
      });
      cy.get('.overview').should('be.visible')
   })
 
+
+
+it("should navigate back to the main page when 'Go Back!' link is clicked", () => {
+  cy.get('.movie-container').find('.movie-cards').first().click();
+  cy.get('a.white-link').should('be.visible').and('contain', 'Go Back!').click();
+  cy.url().should('eq', 'http://localhost:3000/');
+  cy.contains('h1', 'Rancid Tomatillos').should('be.visible');
+  cy.get('.movie-container').should('be.visible');
+});
 });

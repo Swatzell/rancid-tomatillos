@@ -33,9 +33,10 @@
     margin-bottom: 15%;
   }
   .white-link {
-    color: limegreen; /* Your default color */
+    color: limegreen; 
   }
   
   .white-link:active {
     color: white;
   }
+   
